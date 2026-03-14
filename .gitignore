@@ -5,6 +5,7 @@ dist
 # variables de entorno — NO subir al repo
 .env.local
 .env.*.local
+.env.example
 
 # logs y cache
 *.log
