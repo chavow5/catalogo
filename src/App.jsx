@@ -12,18 +12,7 @@ import { config } from "./config/local"
 
 const categoriasExtendidas = [];
 
-if (config.promociones?.activa) {
-  const catPromo = categorias.find(c => c.id === config.promociones.categoriaId);
-  if (catPromo) {
-    categoriasExtendidas.push({
-      id: "cat-promociones",
-      nombre: "Promociones",
-      emoji: "🔖",
-      descripcion: `¡${config.promociones.nombrePromoMostrado}! Llevando ${config.promociones.cantidadMinima} o más, cada unidad de esta categoría te queda a $${config.promociones.precioPromocionalUnitario}.`,
-      productos: catPromo.productos.map(p => ({ ...p, categoriaOriginalId: catPromo.id }))
-    });
-  }
-}
+// Las promociones ahora se cargan como una categoría más desde el CSV.
 
 categoriasExtendidas.push({
   id: "cat-todos",

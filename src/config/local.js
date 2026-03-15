@@ -12,7 +12,7 @@ export const config = {
   // Promociones configurables del local
   // true = activa el descuento automático agrupando múltiplos de la cantidad mínima
   promociones: {
-    activa: true,
+    activa: false,
     // ID de la categoría a la que aplica la promo (ej: "cat-empanadas")
     categoriaId: "cat-empanadas",
     cantidadMinima: 6, // múltiplo (ej: docena, media docena)

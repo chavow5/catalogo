@@ -1,0 +1,12 @@
+Categoria_ID,Categoria_Nombre,Categoria_Emoji,Categoria_Descripcion,Categoria_Filtros,Producto_ID,Producto_Nombre,Producto_Descripcion,Producto_PrecioBase,Producto_Emoji,Producto_Imagen,Producto_Disponible,Producto_Tipo,Combo_OpcionesDe,Combo_Cantidad,Filtro_Etiqueta,Filtro_Destacado,Variantes
+cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-01,Media Docena,¡Elegí 6 empanadas a precio de promo!,6000,🔥,https://images.unsplash.com/photo-1614777986387-015c2a89b696?q=80&w=400&auto=format&fit=crop,SI,combo,cat-empanadas,6,,,
+cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-02,Una Docena,¡Elegí 12 empanadas a super precio!,11000,🔥,https://images.unsplash.com/photo-1614777986387-015c2a89b696?q=80&w=400&auto=format&fit=crop,SI,combo,cat-empanadas,12,,,
+cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-01,Carne Salada,Carne picada sazonada con verduras y especias clásicas,1200,🥟,https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=400&auto=format&fit=crop,SI,,,,,,
+cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-02,Carne Dulce,"Carne con pasas de uva, aceitunas y huevo duro",1200,🥟,https://images.unsplash.com/photo-1596765796791-2a6cda33ba17?q=80&w=400&auto=format&fit=crop,SI,,,,,,
+cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-03,Matambre a la Pizza,"Matambre, mozzarella, tomate y orégano",1400,🥟,,SI,,,,,,
+cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-04,Cheese Burger,"Carne, queso cheddar, cebolla y mostaza",1400,🥟,,SI,,,,,,
+cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-05,Jamón y Queso,Jamón cocido con queso derretido por dentro,1100,🥟,https://images.unsplash.com/photo-1522881113911-c967fb4791ea?q=80&w=400&auto=format&fit=crop,SI,,,,,,
+cat-pizzas,Pizzas,🍕,Elegí el tamaño para cada pizza,todas:Todas|comun:Comunes|especial:Especiales ⭐,piz-01,Muzzarella,Salsa de tomate y mozzarella fresca,,🍕,,SI,,,comun,,Grande:5500
+cat-pizzas,Pizzas,🍕,Elegí el tamaño para cada pizza,todas:Todas|comun:Comunes|especial:Especiales ⭐,piz-02,Napolitana,Muzzarella con rodajas de tomate y albahaca,,🍕,,SI,,,comun,,Grande:5800
+cat-gaseosas,Gaseosas,🥤,Elegí tu gaseosa favorita,,gas-01,Pepsi 1,5 L,Gaseosa de la Linea Pepsi,3300,🥤,https://casaomarynietos.com.ar/wp-content/uploads/2025/03/376545-800-auto.png,SI,,,,,,
+cat-gaseosas,Gaseosas,🥤,Elegí tu gaseosa favorita,,gas-02,Pepsi Black 1,5 L,Gaseosa de la Linea Pepsi,3300,🥤,https://casaomarynietos.com.ar/wp-content/uploads/2025/03/376545-800-auto.png,SI,,,,,,
