@@ -4,9 +4,11 @@ import { categorias } from "../data/productos"
 
 const CarritoContext = createContext()
 
-export const useCarrito = () => useContext(CarritoContext)
+export function useCarrito() {
+  return useContext(CarritoContext)
+}
 
-export const CarritoProvider = ({ children }) => {
+export function CarritoProvider({ children }) {
   const [items, setItems] = useState([])
   const [carritoAbierto, setCarritoAbierto] = useState(false)
 
