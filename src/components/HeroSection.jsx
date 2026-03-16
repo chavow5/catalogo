@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import { config } from "../config/local"
 
+// Parte principal de la pagina
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden pt-16">

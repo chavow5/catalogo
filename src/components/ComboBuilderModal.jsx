@@ -5,6 +5,16 @@ import { useCarrito } from "../context/CarritoContext"
 import { categorias } from "../data/productos"
 import toast from "react-hot-toast"
 
+/*armar los combos
+
+Muestra las opciones de un combo.
+Permite al usuario elegir la cantidad de cada opción y agregar el combo completo al carrito.
+
+Props:
+  - productoCombo: objeto del combo a armar
+  - onClose: función para cerrar el modal
+*/
+
 const ComboBuilderModal = ({ productoCombo, onClose }) => {
   const { agregarItem } = useCarrito()
   const [selecciones, setSelecciones] = useState({})
@@ -32,7 +42,7 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
 
       const nuevoEstado = { ...prev, [idProducto]: nueva }
       if (nueva === 0) delete nuevoEstado[idProducto]
-      
+
       return nuevoEstado
     })
   }
@@ -71,7 +81,7 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
         onClick={onClose}
         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
       />
-      
+
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 10 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -86,14 +96,14 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
           >
             <FiX size={20} />
           </button>
-          
+
           <h2 className="text-2xl font-bold flex items-center gap-2 mb-2 pr-8">
             <span>{productoCombo.emoji}</span>
             <span>Armá tu {productoCombo.nombre}</span>
           </h2>
           <p className="text-white/60 text-sm">
-            Elegí {productoCombo.cantidadCombo} unidades. 
-            {faltan > 0 
+            Elegí {productoCombo.cantidadCombo} unidades.
+            {faltan > 0
               ? <span className="text-naranja-400 font-semibold ml-1">Faltan {faltan}</span>
               : <span className="text-green-400 font-semibold ml-1">¡Listo!</span>
             }
@@ -105,8 +115,8 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
           {opciones.map((op) => {
             const cantOpcion = selecciones[op.id] || 0
             return (
-              <div 
-                key={op.id} 
+              <div
+                key={op.id}
                 className={`flex items-center justify-between p-3 rounded-2xl border transition-colors
                   ${cantOpcion > 0 ? "bg-naranja-500/10 border-naranja-500/30" : "bg-white/5 border-white/5"}`}
               >
@@ -114,7 +124,7 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
                   <h4 className="font-bold text-white text-sm">{op.nombre}</h4>
                   {op.descripcion && <p className="text-white/40 text-xs mt-0.5 leading-tight">{op.descripcion}</p>}
                 </div>
-                
+
                 {/* Controles de Cantidad */}
                 <div className="flex items-center gap-2 bg-oscuro-900 rounded-xl px-2 py-1 border border-white/5">
                   <button
@@ -150,8 +160,8 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
             onClick={handleAgregarAlCarrito}
             disabled={!completado}
             className={`w-full py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 transition-all
-              ${completado 
-                ? "bg-naranja-500 hover:bg-naranja-600 text-white shadow-lg shadow-naranja-500/25" 
+              ${completado
+                ? "bg-naranja-500 hover:bg-naranja-600 text-white shadow-lg shadow-naranja-500/25"
                 : "bg-white/10 text-white/40 cursor-not-allowed"
               }`}
           >

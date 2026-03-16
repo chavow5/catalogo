@@ -6,6 +6,8 @@ import { useCarrito } from "../context/CarritoContext"
 import ImageModal from "./ImageModal"
 import ComboBuilderModal from "./ComboBuilderModal"
 
+//Componente para mostrar los productos
+
 const animCard = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
@@ -13,17 +15,17 @@ const animCard = {
 
 export const ProductCard = ({ producto, categoriaId }) => {
   const { agregarItem } = useCarrito()
-  
+
   // Si el producto tiene variantes (ej. tamaños) usa un estado para la selección
   const tieneVariantes = producto.variantes && producto.variantes.length > 0
   const [varianteElegida, setVarianteElegida] = useState(
     tieneVariantes ? producto.variantes[0].id : null
   )
-  
-  // Si NO tiene variantes (ej. empanadas), usa un estado para la cantidad
+
+  // Si NO tiene variantes (ej. empanadas ), usa un estado para la cantidad
   const [cantidad, setCantidad] = useState(1)
 
-  // Estados para modales
+  // Estados para componentes
   const [modalImagenAbierto, setModalImagenAbierto] = useState(false)
   const [modalComboAbierto, setModalComboAbierto] = useState(false)
 
@@ -56,7 +58,7 @@ export const ProductCard = ({ producto, categoriaId }) => {
     const txtVariante = nombreVarianteActual ? `(${nombreVarianteActual})` : ""
     const txtCant = !tieneVariantes && cantidad > 1 ? `x${cantidad}` : ""
     toast.success(`${producto.emoji} ${producto.nombre} ${txtVariante} ${txtCant} al carrito!`)
-    
+
     // resetear cantidad solo si la usa
     if (!tieneVariantes) setCantidad(1)
   }
@@ -70,13 +72,13 @@ export const ProductCard = ({ producto, categoriaId }) => {
     >
       {/* Imagen si existe */}
       {producto.imagen && (
-        <div 
+        <div
           onClick={() => setModalImagenAbierto(true)}
           className="relative w-full h-40 -mt-4 -mx-4 mb-2 rounded-t-2xl overflow-hidden group cursor-pointer"
           style={{ width: "calc(100% + 2rem)" }}
         >
-          <img 
-            src={producto.imagen} 
+          <img
+            src={producto.imagen}
             alt={producto.nombre}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -125,7 +127,7 @@ export const ProductCard = ({ producto, categoriaId }) => {
 
       {/* Footer: Precio y Controles */}
       <div className="flex items-center justify-between border-t border-white/5 pt-3 mt-auto">
-        
+
         {/* Precio Animado */}
         <div>
           <span className="text-naranja-400 font-bold text-lg">
@@ -172,20 +174,20 @@ export const ProductCard = ({ producto, categoriaId }) => {
             )}
           </motion.button>
         </div>
-        
+
       </div>
 
       <AnimatePresence>
         {modalImagenAbierto && (
-          <ImageModal 
-            imagen={producto.imagen} 
-            onClose={() => setModalImagenAbierto(false)} 
+          <ImageModal
+            imagen={producto.imagen}
+            onClose={() => setModalImagenAbierto(false)}
           />
         )}
         {modalComboAbierto && (
-          <ComboBuilderModal 
-            productoCombo={producto} 
-            onClose={() => setModalComboAbierto(false)} 
+          <ComboBuilderModal
+            productoCombo={producto}
+            onClose={() => setModalComboAbierto(false)}
           />
         )}
       </AnimatePresence>

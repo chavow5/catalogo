@@ -4,6 +4,8 @@ import { FiClock, FiMapPin } from "react-icons/fi"
 import { config } from "../config/local"
 import { div } from "framer-motion/client"
 
+//Footer del sitio
+
 const Footer = () => {
   return (
     <footer className="border-t border-white/5 mt-16 py-10 px-4">

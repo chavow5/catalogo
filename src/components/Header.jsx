@@ -1,8 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { FiShoppingBag } from "react-icons/fi"
-
 import { useCarrito } from "../context/CarritoContext"
 import { config } from "../config/local"
+
+//header
 
 const Header = () => {
   const { cantidadTotal, setCarritoAbierto } = useCarrito()

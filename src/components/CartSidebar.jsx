@@ -3,6 +3,13 @@ import { FiX, FiTrash2, FiPlus, FiMinus } from "react-icons/fi"
 import { FaWhatsapp } from "react-icons/fa"
 import { useCarrito } from "../context/CarritoContext"
 
+/*
+Carrito de Compras
+Muestra los productos agregados al carrito
+Permite modificar cantidades, eliminar items, vaciar el carrito
+y hacer el pedido directamente por WhatsApp.
+*/
+
 const CartSidebar = () => {
   const {
     items,
@@ -16,6 +23,7 @@ const CartSidebar = () => {
     infoPromoActivada,
   } = useCarrito()
 
+  // Llama a la función de WhatsApp
   const handlePedir = () => {
     pedirPorWhatsapp()
   }
@@ -61,7 +69,7 @@ const CartSidebar = () => {
                 // carrito vacío
                 <div className="flex flex-col items-center justify-center h-full gap-4 text-center">
                   <span className="text-6xl">🛒</span>
-                  <p className="text-white/40 text-sm">Todavía no agregaste nada.<br />¡Elegí algo rico!</p>
+                  <p className="text-white/40 text-sm">Todavía no agregaste nada.<br />¡Elegí algo rico!<br />¿Que estas esperando?</p>
                 </div>
               ) : (
                 <AnimatePresence>
@@ -69,61 +77,62 @@ const CartSidebar = () => {
                     const subtotal = item.precio * item.cantidad
 
                     return (
-                    <motion.div
-                      key={item.clave}
-                      layout
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
-                      className="bg-glass rounded-xl p-3 flex items-center gap-3"
-                    >
-                      {/* emoji */}
-                      <span className="text-2xl shrink-0">{item.emoji}</span>
-
-                      {/* info */}
-                      <div className="flex-1 min-w-0">
-                        <p className="text-white font-semibold text-sm truncate">{item.nombre}</p>
-                        {item.variante && (
-                          <p className="text-white/40 text-xs capitalize">{item.variante}</p>
-                        )}
-                        <div className="flex items-center gap-2 mt-0.5">
-                          <p className="text-naranja-400 text-sm font-bold">
-                            ${subtotal.toLocaleString("es-AR")}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* controles cantidad */}
-                      <div className="flex items-center gap-1 bg-oscuro-700 rounded-lg px-2 py-1">
-                        <button
-                          onClick={() => cambiarCantidad(item.clave, item.cantidad - 1)}
-                          className="text-white/60 hover:text-white p-0.5"
-                          aria-label="Disminuir cantidad"
-                        >
-                          <FiMinus size={12} />
-                        </button>
-                        <span className="text-white text-sm w-4 text-center font-semibold">
-                          {item.cantidad}
-                        </span>
-                        <button
-                          onClick={() => cambiarCantidad(item.clave, item.cantidad + 1)}
-                          className="text-white/60 hover:text-white p-0.5"
-                          aria-label="Aumentar cantidad"
-                        >
-                          <FiPlus size={12} />
-                        </button>
-                      </div>
-
-                      {/* quitar item */}
-                      <button
-                        onClick={() => quitarItem(item.clave)}
-                        className="text-white/30 hover:text-red-400 transition-colors p-1"
-                        aria-label="Eliminar producto"
+                      <motion.div
+                        key={item.clave}
+                        layout
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        className="bg-glass rounded-xl p-3 flex items-center gap-3"
                       >
-                        <FiTrash2 size={14} />
-                      </button>
-                    </motion.div>
-                  )})}
+                        {/* emoji */}
+                        <span className="text-2xl shrink-0">{item.emoji}</span>
+
+                        {/* info */}
+                        <div className="flex-1 min-w-0">
+                          <p className="text-white font-semibold text-sm truncate">{item.nombre}</p>
+                          {item.variante && (
+                            <p className="text-white/40 text-xs capitalize">{item.variante}</p>
+                          )}
+                          <div className="flex items-center gap-2 mt-0.5">
+                            <p className="text-naranja-400 text-sm font-bold">
+                              ${subtotal.toLocaleString("es-AR")}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* controles cantidad */}
+                        <div className="flex items-center gap-1 bg-oscuro-700 rounded-lg px-2 py-1">
+                          <button
+                            onClick={() => cambiarCantidad(item.clave, item.cantidad - 1)}
+                            className="text-white/60 hover:text-white p-0.5"
+                            aria-label="Disminuir cantidad"
+                          >
+                            <FiMinus size={12} />
+                          </button>
+                          <span className="text-white text-sm w-4 text-center font-semibold">
+                            {item.cantidad}
+                          </span>
+                          <button
+                            onClick={() => cambiarCantidad(item.clave, item.cantidad + 1)}
+                            className="text-white/60 hover:text-white p-0.5"
+                            aria-label="Aumentar cantidad"
+                          >
+                            <FiPlus size={12} />
+                          </button>
+                        </div>
+
+                        {/* quitar item */}
+                        <button
+                          onClick={() => quitarItem(item.clave)}
+                          className="text-white/30 hover:text-red-400 transition-colors p-1"
+                          aria-label="Eliminar producto"
+                        >
+                          <FiTrash2 size={14} />
+                        </button>
+                      </motion.div>
+                    )
+                  })}
                 </AnimatePresence>
               )}
             </div>

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import { FiX } from "react-icons/fi"
 
+//Componente para ver las imagenes en grande
+
 const ImageModal = ({ imagen, onClose }) => {
   if (!imagen) return null
 
@@ -14,7 +16,7 @@ const ImageModal = ({ imagen, onClose }) => {
         onClick={onClose}
         className="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-zoom-out"
       />
-      
+
       {/* Contenido (Imagen) */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 20 }}

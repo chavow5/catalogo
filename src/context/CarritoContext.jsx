@@ -2,6 +2,12 @@ import { createContext, useContext, useState, useCallback } from "react"
 import { config } from "../config/local"
 import { categorias } from "../data/productos"
 
+// Contexto global del carrito de compras
+//
+// Centraliza todo el estado y la lógica del carrito:
+// agregar, quitar, cambiar cantidad, vaciar, calcular totales,
+// aplicar promociones automáticas y generar el pedido por WhatsApp.
+
 const CarritoContext = createContext()
 
 export function useCarrito() {
@@ -45,13 +51,13 @@ export function CarritoProvider({ children }) {
   // === LÓGICA DE PROMOCIONES GENÉRICA ===
   let descuentoGeneral = 0
   let infoPromoActivada = null
-  
+
   const pConf = config.promociones
   if (pConf?.activa) {
     // Buscar cuántos items sueltos hay en el carrito de la categoría promocionada
     const itemsPromo = items.filter((i) => i.categoriaId === pConf.categoriaId && i.tipo !== "combo")
     const cantidadTotalEnPromo = itemsPromo.reduce((acc, i) => acc + i.cantidad, 0)
-    
+
     const cantPromos = Math.floor(cantidadTotalEnPromo / pConf.cantidadMinima)
 
     if (cantPromos > 0) {
@@ -61,7 +67,7 @@ export function CarritoProvider({ children }) {
           precios.push(item.precio)
         }
       })
-      
+
       // Ordenar de mayor a menor para beneficiar al cliente
       precios.sort((a, b) => b - a)
 
@@ -74,7 +80,7 @@ export function CarritoProvider({ children }) {
       // Nuevo precio basado en promo
       const precioConPromo = cantPromos * (pConf.cantidadMinima * pConf.precioPromocionalUnitario)
       descuentoGeneral = precioTotalOriginal - precioConPromo
-      
+
       infoPromoActivada = {
         nombre: pConf.nombrePromoMostrado,
         unidades: unidadesEnPromo,
@@ -98,10 +104,10 @@ export function CarritoProvider({ children }) {
     categorias.forEach((cat) => {
       // Filtramos items del carrito que pertenecen a esta categoría
       const itemsCat = items.filter((i) => i.categoriaId === cat.id)
-      
+
       if (itemsCat.length > 0) {
         mensaje += `${cat.emoji} *${cat.nombre}:*\n`
-        
+
         itemsCat.forEach((item) => {
           const subtotalItem = item.precio * item.cantidad
           const varianteStr = item.variante ? ` (${item.variante})` : ""
