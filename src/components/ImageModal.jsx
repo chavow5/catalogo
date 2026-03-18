@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { createPortal } from "react-dom"
 import { FiX } from "react-icons/fi"
 
 //Componente para ver las imagenes en grande
@@ -6,7 +7,7 @@ import { FiX } from "react-icons/fi"
 const ImageModal = ({ imagen, onClose }) => {
   if (!imagen) return null
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Backdrop */}
       <motion.div
@@ -36,7 +37,8 @@ const ImageModal = ({ imagen, onClose }) => {
           className="w-full h-full object-contain max-h-[90vh] bg-oscuro-900"
         />
       </motion.div>
-    </div>
+    </div>,
+    document.body
   )
 }
 

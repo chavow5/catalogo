@@ -187,6 +187,7 @@ export const ProductCard = ({ producto, categoriaId }) => {
         {modalComboAbierto && (
           <ComboBuilderModal
             productoCombo={producto}
+            categoriaId={categoriaId}
             onClose={() => setModalComboAbierto(false)}
           />
         )}

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { FiX, FiPlus, FiMinus, FiShoppingBag } from "react-icons/fi"
 import { useCarrito } from "../context/CarritoContext"
@@ -15,7 +16,7 @@ Props:
   - onClose: función para cerrar el modal
 */
 
-const ComboBuilderModal = ({ productoCombo, onClose }) => {
+const ComboBuilderModal = ({ productoCombo, categoriaId, onClose }) => {
   const { agregarItem } = useCarrito()
   const [selecciones, setSelecciones] = useState({})
 
@@ -64,6 +65,7 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
     const itemEnCarrito = {
       ...productoCombo,
       precio: productoCombo.precioBase,
+      categoriaId
     }
 
     agregarItem(itemEnCarrito, 1, detalles)
@@ -71,7 +73,7 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
     onClose()
   }
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Backdrop */}
       <motion.div
@@ -111,7 +113,7 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
         </div>
 
         {/* Lista de Opciones */}
-        <div className="p-4 overflow-y-auto hidden-scrollbar flex flex-col gap-3">
+        <div className="p-4 overflow-y-auto hidden-scrollbar flex flex-col gap-3 flex-1 min-h-0">
           {opciones.map((op) => {
             const cantOpcion = selecciones[op.id] || 0
             return (
@@ -170,7 +172,8 @@ const ComboBuilderModal = ({ productoCombo, onClose }) => {
           </motion.button>
         </div>
       </motion.div>
-    </div>
+    </div>,
+    document.body
   )
 }
 
