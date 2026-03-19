@@ -108,11 +108,11 @@ export function CarritoProvider({ children }) {
     
     if (nombre) mensaje += `*Cliente:* ${nombre}\n`
     if (metodoEntrega) {
-      mensaje += `*Entrega:* ${metodoEntrega === "delivery" ? "Delivery 🚀" : "Retiro por local 🏢"}\n`
+      mensaje += `*Entrega:* ${metodoEntrega === "delivery" ? "Delivery" : "Retiro por local"}\n`
     }
     if (metodoPago) {
-      const pagoFormatted = metodoPago === "efectivo" ? "Efectivo 💵" : 
-                            metodoPago === "transferencia" ? "Transferencia 🏦" : "Tarjeta 💳"
+      const pagoFormatted = metodoPago === "efectivo" ? "Efectivo" : 
+                            metodoPago === "transferencia" ? "Transferencia" : "Tarjeta"
       mensaje += `*Pago:* ${pagoFormatted}\n`
     }
     
