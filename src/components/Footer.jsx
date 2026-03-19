@@ -2,7 +2,6 @@ import { GiFootprint } from "react-icons/gi"
 import { FaWhatsapp, FaInstagram } from "react-icons/fa"
 import { FiClock, FiMapPin } from "react-icons/fi"
 import { config } from "../config/local"
-import { div } from "framer-motion/client"
 
 //Footer del sitio
 

@@ -19,11 +19,11 @@ export const config = {
   // si el total es mayor a X cantidad de $$ se aplica un descuento del Y%
 
   promociones: {
-    activa: false,
+    activa: true,
     // ID de la categoría a la que aplica la promo (ej: "cat-empanadas")
     categoriaId: "cat-empanadas",
     cantidadMinima: 6, // múltiplo (ej: docena, media docena)
-    precioPromocionalUnitario: 1000, // a cuánto queda cada unidad dentro de la promo
-    nombrePromoMostrado: "Descuento del 10%" // el nombre que sale en el ticket/carrito
+    precioPromocionalUnitario: 1667, // a cuánto queda cada unidad dentro de la promo
+    nombrePromoMostrado: "Descuento del 30%" // el nombre que sale en el ticket/carrito
   }
 }
