@@ -19,12 +19,21 @@ const HeroSection = () => {
 
         {/* ícono animado */}
         <motion.div
-          initial={{ scale: 0, rotate: -20 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
-          className="text-7xl mb-4 inline-block"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ 
+            type: "spring", 
+            stiffness: 260, 
+            damping: 20,
+            delay: 0.1 
+          }}
+          className="mb-6 inline-block"
         >
-          🥟
+          <img 
+            src="/imagenes/logo/logo-lahuella.png" 
+            alt={config.nombreLocal}
+            className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-[0_0_15px_rgba(251,146,60,0.3)]"
+          />
         </motion.div>
 
         {/* nombre del local */}

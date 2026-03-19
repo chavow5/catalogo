@@ -99,10 +99,24 @@ export function CarritoProvider({ children }) {
   const cantidadTotal = items.reduce((acc, item) => acc + item.cantidad, 0)
 
   // === GENERACIÓN MSG WHATSAPP GENÉRICO ===
-  const generarMensajeWsp = useCallback(() => {
+  const generarMensajeWsp = useCallback((datosUsuario = {}) => {
     if (items.length === 0) return ""
 
-    let mensaje = `*Pedido en ${config.nombreLocal}*\n\n`
+    const { nombre, metodoEntrega, direccion, metodoPago } = datosUsuario
+
+    let mensaje = `*Nuevo Pedido en ${config.nombreLocal}*\n\n`
+    
+    if (nombre) mensaje += `*Cliente:* ${nombre}\n`
+    if (metodoEntrega) {
+      mensaje += `*Entrega:* ${metodoEntrega === "delivery" ? "Delivery 🚀" : "Retiro por local 🏢"}\n`
+    }
+    if (metodoPago) {
+      const pagoFormatted = metodoPago === "efectivo" ? "Efectivo 💵" : 
+                            metodoPago === "transferencia" ? "Transferencia 🏦" : "Tarjeta 💳"
+      mensaje += `*Pago:* ${pagoFormatted}\n`
+    }
+    
+    mensaje += "\n--- *DETALLE* ---\n\n"
 
     // Iteramos por las categorías oficiales para mantener el orden y agrupar visualmente
     categorias.forEach((cat) => {
@@ -126,13 +140,16 @@ export function CarritoProvider({ children }) {
     }
 
     mensaje += `💰 *Total: $${total.toLocaleString("es-AR")}*\n\n`
-    mensaje += `📍 Por favor indicá tu dirección de envío o si retiras en el local. ¡Gracias!`
+    
+    if (!metodoEntrega) {
+      mensaje += `📍 Por favor indicá tu dirección de envío o si retiras en el local. ¡Gracias!`
+    }
 
     return mensaje
   }, [items, total, infoPromoActivada])
 
-  const pedirPorWhatsapp = useCallback(() => {
-    const mensaje = generarMensajeWsp()
+  const pedirPorWhatsapp = useCallback((datosUsuario) => {
+    const mensaje = generarMensajeWsp(datosUsuario)
     const url = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(mensaje)}`
     window.open(url, "_blank")
   }, [generarMensajeWsp])
