@@ -2,7 +2,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import toast from "react-hot-toast"
 import { FiPlus, FiMinus, FiShoppingBag, FiMaximize2, FiList } from "react-icons/fi"
-import { useCarrito } from "../context/CarritoContext"
+import { useCarrito } from "../context/useCarrito"
 import ImageModal from "./ImageModal"
 import ComboBuilderModal from "./ComboBuilderModal"
 

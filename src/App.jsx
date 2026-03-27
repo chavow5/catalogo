@@ -14,6 +14,8 @@ const categoriasExtendidas = [];
 
 // Las promociones ahora se cargan como una categoría más desde el CSV.
 
+categoriasExtendidas.push(...categorias);
+
 categoriasExtendidas.push({
   id: "cat-todos",
   nombre: "Todos",
@@ -23,8 +25,6 @@ categoriasExtendidas.push({
     c.productos.map(p => ({ ...p, categoriaOriginalId: c.id }))
   )
 });
-
-categoriasExtendidas.push(...categorias);
 
 const animGrilla = {
   hidden: { opacity: 0 },

@@ -1,22 +1,13 @@
 import { createContext, useContext, useState, useCallback } from "react"
 import { config } from "../config/local"
 import { categorias } from "../data/productos"
+import { CarritoContext } from "./useCarrito"
 
 // Contexto global del carrito de compras
 //
 // Centraliza todo el estado y la lógica del carrito:
 // agregar, quitar, cambiar cantidad, vaciar, calcular totales,
 // aplicar promociones automáticas y generar el pedido por WhatsApp.
-
-const CarritoContext = createContext()
-
-export const useCarrito = () => {
-  const context = useContext(CarritoContext)
-  if (!context) {
-    throw new Error("useCarrito debe usarse dentro de un CarritoProvider")
-  }
-  return context
-}
 
 export function CarritoProvider({ children }) {
   const [items, setItems] = useState([])

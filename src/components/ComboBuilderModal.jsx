@@ -2,7 +2,7 @@ import { useState } from "react"
 import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { FiX, FiPlus, FiMinus, FiShoppingBag } from "react-icons/fi"
-import { useCarrito } from "../context/CarritoContext"
+import { useCarrito } from "../context/useCarrito"
 import { categorias } from "../data/productos"
 import toast from "react-hot-toast"
 

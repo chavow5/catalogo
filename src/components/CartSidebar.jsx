@@ -2,7 +2,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FiX, FiTrash2, FiPlus, FiMinus } from "react-icons/fi"
 import { FaWhatsapp } from "react-icons/fa"
-import { useCarrito } from "../context/CarritoContext"
+import { useCarrito } from "../context/useCarrito"
 import OrderDetailsModal from "./OrderDetailsModal"
 
 /*

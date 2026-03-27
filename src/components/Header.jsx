@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { FiShoppingBag } from "react-icons/fi"
-import { useCarrito } from "../context/CarritoContext"
+import { useCarrito } from "../context/useCarrito"
 import { config } from "../config/local"
 
 //header
