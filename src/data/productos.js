@@ -65,6 +65,7 @@ data.forEach((row) => {
     tipo: row.Producto_Tipo?.trim() || undefined,
     opcionesDe: row.Combo_OpcionesDe?.trim() || undefined,
     cantidadCombo: row.Combo_Cantidad ? Number(row.Combo_Cantidad) : undefined,
+    filtroCombo: row.Combo_FiltroEtiqueta?.trim() || undefined,
     etiquetaFiltro: row.Filtro_Etiqueta?.trim() || undefined,
     etiquetaDestacada: row.Filtro_Destacado?.trim() || undefined,
     variantes: variantes,
