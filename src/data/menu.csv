@@ -9,12 +9,12 @@ cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-06,2 Pizzas 
 
 
 cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-06,Carne Salada,Carne picada sazonada con verduras y especias clásicas,2500,🥟,/imagenes/productos/emp-c.jpg,SI,,,,,
-cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-02,Carne Dulce,Carne con pasas de uva, aceitunas y huevo duro,2500,🥟,/imagenes/productos/emp.jpg,SI,,,,,
+cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-02,Carne Dulce,Carne con pasas de uva. aceitunas y huevo duro,2500,🥟,/imagenes/productos/emp-c.jpg,SI,,,,,
 cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-05,Jamón y Queso,Jamón cocido con queso derretido por dentro,2500,🥟,/imagenes/productos/emp-jyq.jpg,SI,,,,,
 cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-03,Matambre a la Pizza,Matambre, mozzarella, tomate y orégano,2500,🥟,/imagenes/productos/emp.jpg,SI,,,,,
 cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-07,Verdura,Verdura,2500,🥟,/imagenes/productos/emp-v.jpg,SI,,,,,
-cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-08,Choclo,Choclo,2500,🥟,/imagenes/productos/empanada.jpg,SI,,,,,
-cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-09,Tomate y Albahaca,Queso, Tomate y Albahaca,2500,🥟,/imagenes/productos/emp-jyq.jpg,SI,,,,,
+cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-08,Choclo,Choclo,2500,🥟,/imagenes/productos/emp.jpg,SI,,,,,
+cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-09,Tomate y Albahaca,"Queso, Tomate y Albahaca",2500,🥟,/imagenes/productos/empanada.jpg,SI,,,,,
 cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-10,Fugazzeta,Fugazzeta,2500,🥟,/imagenes/productos/empanada.jpg,SI,,,,,
 cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-11,Cheese Burger,Cheese Burger,2500,🥟,/imagenes/productos/emp-c.jpg,SI,,,,,
 cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-12,Roquefort y Nuez,Roquefort y Nuez,2500,🥟,/imagenes/productos/empanada.jpg,SI,,,,,
@@ -24,8 +24,8 @@ cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-14,Árabe,"
 
 
 
-cat-pizzas,Pizzas,🍕,Elegí el tamaño para cada pizza,todas:Todas|comun:Comunes|especial:Especiales ⭐,piz-01,Muzzarella,Salsa de tomate y mozzarella fresca,10000,🍕,,SI,,,,comun,,
-cat-pizzas,Pizzas,🍕,Elegí el tamaño para cada pizza,todas:Todas|comun:Comunes|especial:Especiales ⭐,piz-02,Napolitana,Muzzarella con rodajas de tomate y albahaca,13000,🍕,,Si,,,,comun,,
+cat-pizzas,Pizzas,🍕,Elegí el tamaño para cada pizza,todas:Todas|comun:Comunes|especial:Especiales ⭐,piz-01,Muzzarella,Salsa de tomate y mozzarella fresca,10000,🍕,imagenes/productos/pizza-esp.jpg,SI,,,,comun,,
+cat-pizzas,Pizzas,🍕,Elegí el tamaño para cada pizza,todas:Todas|comun:Comunes|especial:Especiales ⭐,piz-02,Napolitana,Muzzarella con rodajas de tomate y albahaca,13000,🍕,imagenes/productos/pizza-esp.jpg,Si,,,,comun,,
 
 
 cat-bebidas,Bebidas,🥤,Refrescate con nuestras bebidas,,beb-01,Lata de Pepsi,Pepsi 354ml bien fría,1,🥤,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDtKLsa2gKyrEaOasHo37K4dX3DfeOA8Y0pw&s,SI,,,,,,
