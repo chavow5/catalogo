@@ -9,7 +9,7 @@ const OrderDetailsModal = ({ isOpen, onClose, onConfirm }) => {
   const [formData, setFormData] = useState({
     nombre: "",
     metodoEntrega: "delivery", // 'delivery' o 'retiro'
-    metodoPago: "efectivo" // 'efectivo', 'transferencia'
+    metodoPago: "efectivo", // 'efectivo', 'transferencia'
   })
 
   const [errors, setErrors] = useState({})
@@ -126,9 +126,9 @@ const OrderDetailsModal = ({ isOpen, onClose, onConfirm }) => {
               >
                 <option value="efectivo" className="bg-oscuro-800 text-white">Efectivo 💵</option>
                 <option value="transferencia" className="bg-oscuro-800 text-white">Transferencia 🏦</option>
-                {/* <option value="tarjeta" className="bg-oscuro-800 text-white">Tarjeta Débito/Crédito 💳</option> */}
               </select>
             </div>
+
 
             {/* Botón Enviar */}
             <button

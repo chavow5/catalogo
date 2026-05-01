@@ -25,5 +25,13 @@ export const config = {
     cantidadMinima: 6, // múltiplo (ej: docena, media docena)
     precioPromocionalUnitario: 1667, // a cuánto queda cada unidad dentro de la promo
     nombrePromoMostrado: "Descuento del 30%" // el nombre que sale en el ticket/carrito
+  },
+
+  // Sorteo / Giveaway
+  sorteo: {
+    activo: true,                            // false = oculta toda la sección
+    fechaInicio: "2026-05-16T00:00:00",      // cuando empieza el sorteo
+    premio: "¡Premio sorpresa! 🎁",
+    descripcion: "Hacé tu pedido y participás automáticamente en el sorteo.",
   }
 }

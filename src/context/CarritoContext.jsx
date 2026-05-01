@@ -93,7 +93,7 @@ export function CarritoProvider({ children }) {
   const generarMensajeWsp = useCallback((datosUsuario = {}) => {
     if (items.length === 0) return ""
 
-    const { nombre, metodoEntrega, direccion, metodoPago } = datosUsuario
+    const { nombre, metodoEntrega, direccion, metodoPago, dni } = datosUsuario
 
     let mensaje = `*Nuevo Pedido en ${config.nombreLocal}*\n\n`
     
@@ -134,6 +134,10 @@ export function CarritoProvider({ children }) {
     
     if (!metodoEntrega) {
       mensaje += `📍 Por favor indicá tu dirección de envío o si retiras en el local. ¡Gracias!`
+    }
+    
+    if (dni && dni.length >= 7) {
+      mensaje += `\n\n🎟️ *Participo del sorteo:* Mi DNI es ${dni}`
     }
 
     return mensaje

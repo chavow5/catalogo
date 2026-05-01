@@ -7,6 +7,7 @@ import CategoryTabs from "./components/CategoryTabs"
 import { ProductCard } from "./components/ProductCard"
 import CartSidebar from "./components/CartSidebar"
 import Footer from "./components/Footer"
+import SorteoSection from "./components/SorteoSection"
 import { categorias } from "./data/productos"
 import { config } from "./config/local"
 
@@ -71,6 +72,7 @@ function App() {
 
       <main className="min-h-screen">
         <HeroSection />
+        <SorteoSection />
 
         <section className="max-w-6xl mx-auto px-4 py-10">
           

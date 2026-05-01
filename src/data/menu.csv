@@ -2,9 +2,9 @@ Categoria_ID,Categoria_Nombre,Categoria_Emoji,Categoria_Descripcion,Categoria_Fi
 cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-01,Media Docena,¡Elegí 6 empanadas a precio de promo!,10000,🔥,/imagenes/promociones/prom-mdoc1.png,SI,combo,cat-empanadas,6,,,,
 cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-02,Una Docena,¡Elegí 12 empanadas a super precio!,20000,🔥,/imagenes/promociones/prom-doc.png,SI,combo,cat-empanadas,12,,,,
 cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-03,Doc. Empanadas + Pepsi 1.5lt,1 docena de empanadas + 1 Pepsi 1.5lt,22000,🔥,/imagenes/promociones/prom-doc-p.png,SI,combo,cat-empanadas,12,,,,
-cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-04,½ Doc. + 2 Latas Pepsi,Media docena de empanadas + 2 latas de Pepsi,12500,🔥,/imagenes/promociones/prom-mdoc.png,SI,combo,cat-empanadas,6,,,,
-cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-05,Pizza Común + Pepsi 1.5lt,1 pizza común + 1 Pepsi 1.5lt,15000,🔥,/imagenes/promociones/prom-pizza.png,SI,combo,cat-pizzas,1,comun,,,
-cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-06,2 Pizzas Comunes,2 pizzas comunes al mejor precio,20000,🔥,/imagenes/promociones/prom-2pizza.jpeg,SI,combo,cat-pizzas,2,comun,,,
+cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-04,Dos Docenas,¡Elegí 24 empanadas a super precio!,38000,🔥,/imagenes/promociones/prom-2doc.png,SI,combo,cat-empanadas,24,,,,
+cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-05,Cinco Docenas,¡Elegí 60 empanadas a precio de Locos!,95000,🔥,/imagenes/promociones/prom-5doc.png,SI,combo,cat-empanadas,60,,,,
+
 
 
 
@@ -24,8 +24,8 @@ cat-empanadas,Empanadas,🥟,Podés combinar cualquier variedad,,emp-14,Árabe,"
 
 
 
-cat-pizzas,Pizzas,🍕,Elegí el tamaño para cada pizza,todas:Todas|comun:Comunes|especial:Especiales ⭐,piz-01,Muzzarella,Salsa de tomate y mozzarella fresca,10000,🍕,imagenes/productos/pizza-esp.jpg,SI,,,,comun,,
-cat-pizzas,Pizzas,🍕,Elegí el tamaño para cada pizza,todas:Todas|comun:Comunes|especial:Especiales ⭐,piz-02,Napolitana,Muzzarella con rodajas de tomate y albahaca,13000,🍕,imagenes/productos/pizza-esp.jpg,Si,,,,comun,,
+cat-pizzas,Pizzas,🍕,Elegí Como vas a querer tu pizza,,piz-01,Muzzarella,Salsa de tomate y mozzarella fresca,12000,🍕,imagenes/productos/pizza-esp.jpg,SI,,,,comun,,
+cat-pizzas,Pizzas,🍕,Elegí Como vas a querer tu pizza,,piz-02,Especial,Muzzarella con rodajas de Jamon Cocido,15000,🍕,imagenes/productos/pizza-esp.jpg,Si,,,,Especial,,
 
 
 cat-bebidas,Bebidas,🥤,Refrescate con nuestras bebidas,,beb-01,Lata de Pepsi,Pepsi 354ml bien fría,1,🥤,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDtKLsa2gKyrEaOasHo37K4dX3DfeOA8Y0pw&s,SI,,,,,,
