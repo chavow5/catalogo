@@ -29,7 +29,7 @@ export const config = {
 
   // Sorteo / Giveaway
   sorteo: {
-    activo: true,                            // false = oculta toda la sección
+    activo: false,                           // false = oculta toda la sección
     fechaInicio: "2026-05-16T00:00:00",      // cuando empieza el sorteo
     premio: "¡Premio sorpresa! 🎁",
     descripcion: "Hacé tu pedido y participás automáticamente en el sorteo.",
