@@ -1,9 +1,9 @@
 Categoria_ID,Categoria_Nombre,Categoria_Emoji,Categoria_Descripcion,Categoria_Filtros,Producto_ID,Producto_Nombre,Producto_Descripcion,Producto_PrecioBase,Producto_Emoji,Producto_Imagen,Producto_Disponible,Producto_Tipo,Combo_OpcionesDe,Combo_Cantidad,Combo_FiltroEtiqueta,Filtro_Etiqueta,Filtro_Destacado,Variantes
-cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-01,Media Docena,¡Elegí 6 empanadas a precio de promo!,10000,🔥,/imagenes/promociones/prom-mdoc1.png,SI,combo,cat-empanadas,6,,,,
-cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-02,Una Docena,¡Elegí 12 empanadas a super precio!,20000,🔥,/imagenes/promociones/prom-doc.png,SI,combo,cat-empanadas,12,,,,
-cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-03,Doc. Empanadas + Pepsi 1.5lt,1 docena de empanadas + 1 Pepsi 1.5lt,22000,🔥,/imagenes/promociones/prom-doc-p.png,SI,combo,cat-empanadas,12,,,,
+cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-01,Media Docena,¡Elegí 6 empanadas a precio de promo!,11000,🔥,/imagenes/promociones/prom-mdoc1.png,SI,combo,cat-empanadas,6,,,,
+cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-02,Una Docena,¡Elegí 12 empanadas a super precio!,22000,🔥,/imagenes/promociones/prom-doc.png,SI,combo,cat-empanadas,12,,,,
+cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-03,Doc. Empanadas + Pepsi 1.5lt,1 docena de empanadas + 1 Pepsi 1.5lt,24000,🔥,/imagenes/promociones/prom-doc-p.png,SI,combo,cat-empanadas,12,,,,
 cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-04,Dos Docenas,¡Elegí 24 empanadas a super precio!,38000,🔥,/imagenes/promociones/prom-2doc.png,SI,combo,cat-empanadas,24,,,,
-cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-05,Cinco Docenas,¡Elegí 60 empanadas a precio de Locos!,95000,🔥,/imagenes/promociones/prom-5doc.png,SI,combo,cat-empanadas,60,,,,
+cat-promociones,Promociones,🔖,Elegí tus combos favoritos,,promo-05,Cinco Docenas,¡Elegí 60 empanadas a precio de Locos!,95000,🔥,/imagenes/promociones/promo-5doc.png,SI,combo,cat-empanadas,60,,,,
 
 
 
