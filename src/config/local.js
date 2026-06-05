@@ -23,8 +23,8 @@ export const config = {
     // ID de la categoría a la que aplica la promo (ej: "cat-empanadas")
     categoriaId: "cat-empanadas",
     cantidadMinima: 6, // múltiplo (ej: docena, media docena)
-    precioPromocionalUnitario: 1667, // a cuánto queda cada unidad dentro de la promo
-    nombrePromoMostrado: "Descuento del 30%" // el nombre que sale en el ticket/carrito
+    precioPromocionalUnitario: 1850, // 1850 x 12 = 22200 (para poder redondear a 22mil) y 1850 x 6 = 11100
+    nombrePromoMostrado: "Precio Promo" // el nombre que sale en el ticket/carrito
   },
 
   // Sorteo / Giveaway
