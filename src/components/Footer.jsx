@@ -3,7 +3,7 @@ import { FaWhatsapp, FaInstagram } from "react-icons/fa"
 import { FiClock, FiMapPin } from "react-icons/fi"
 import { config } from "../config/local"
 
-//Footer del sitio
+// Footer
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
             alt={`Logo de ${config.nombreLocal}`}
             className="w-10 h-10 object-contain rounded-full"
             onError={(e) => {
-              e.target.style.display = 'none'; // ocultar si la imagen no existe
+              e.target.style.display = 'none';
             }}
           />
           <span className="text-xl font-bold text-gradient">{config.nombreLocal}</span>
@@ -76,7 +76,7 @@ const Footer = () => {
           </a>
           |
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/davidramirez_651/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-pink-500 hover:underline mx-1"
